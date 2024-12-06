@@ -1,15 +1,14 @@
-﻿class Program
+﻿using System;
+
+class Program
 {
-	static void func1()
-	{
-		Console.WriteLine("abouve");
-	}
-    static void Main()
+
+    static int Main(String[] Args)
     {
-        Console.WriteLine("Hello, world!");
-		func1();
-		func2();
-		
+		if (Args.Length != 1)
+			return 1;
+        Console.WriteLine(Args[0]);
+		return 0;
     }
 
 }
