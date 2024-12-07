@@ -1,13 +1,11 @@
-class Program
+class Historian_Hysteria_P2
 {
-	static bool NotInList(int number, LinkedList<int[]> List, int index)
+	static bool NotInList(int number, LinkedList<int[]> List)
 	{
-		int iterator = 0;
 		foreach(var elem in List)
 		{
-			if (iterator == index && elem[0] == number)
+			if (elem[0] == number)
 				return false;
-			iterator++;
 		}
 		return true;
 	}
@@ -15,9 +13,9 @@ class Program
 	static void CreateListFromArray(int[] LeftArray, LinkedList<int[]> List)
 	{
 		List.AddLast(new int[] {LeftArray[0], Array.FindAll(LeftArray, elm => elm == LeftArray[0]).Length});
-		for (int i = 0; i < LeftArray.Length; i++)
+		for (int i = 1; i < LeftArray.Length; i++)
 		{
-			if (NotInList(LeftArray[i], List, i))
+			if (NotInList(LeftArray[i], List))
 				List.AddLast(new int[] {LeftArray[i], Array.FindAll(LeftArray, elm => elm == LeftArray[i]).Length});
 		}
 	}
@@ -49,8 +47,9 @@ class Program
     static int Main(string[] Args)
     {
 		long result = 0;
-		string Text = "1   1\n4   4\n8   8\n5   8\n8   8\n1   1\n1   1\n8   8\n4   4\n";
-		Console.Write(Text);
+		if (!File.Exists("input.txt"))
+			return 1;
+		string Text = File.ReadAllText("input.txt");
 		string[] Lines = Text.Split('\n');
 		int[] LeftArray = new int[Lines.Length - (Lines[Lines.Length - 1].Length == 0 ? 1 : 0)];
 		int[] RightArray = new int[Lines.Length - (Lines[Lines.Length - 1].Length == 0 ? 1 : 0)];
@@ -58,9 +57,9 @@ class Program
 		LinkedList<int[]> RightOccurrenceList = new LinkedList<int[]>();
 		CreateArrayFromString(Lines, LeftArray, RightArray);
 		CreateListFromArray(LeftArray, LeftOccurrenceList);
-		CreateListFromArray(LeftArray, RightOccurrenceList);
+		CreateListFromArray(RightArray, RightOccurrenceList);
 		foreach (var elm in LeftOccurrenceList)
-			result += elm[0] * elm[1] * GetRelevantVal(elm[0], RightOccurrenceList); 
+			result += elm[0] * elm[1] * GetRelevantVal(elm[0], RightOccurrenceList);
 		Console.WriteLine(result);
 		return 0;
 	}

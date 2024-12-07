@@ -1,8 +1,8 @@
 ﻿using System;
 
-class Program
+class Historian_Hysteria_P1
 {
-	static int	abs(int number)
+	static int	Abs(int number)
 	{
 		if (number < 0)
 			number *= -1;
@@ -38,7 +38,7 @@ class Program
 		Array.Sort(LeftArray);
 		Array.Sort(RightArray);
 		for(int i = 0; i < RightArray.Length;i++)
-			result += abs(LeftArray[i] - RightArray[i]);
+			result += Abs(LeftArray[i] - RightArray[i]);
 		Console.WriteLine(result);
 		return 0;
 	}
