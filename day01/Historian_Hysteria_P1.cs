@@ -9,7 +9,7 @@ class Program
 		return (number);
 	}
 
-	static void	CreatArrayFromString(string[] Lines, int[] LeftArray, int[] RightArray)
+	static void	CreateArrayFromString(string[] Lines, int[] LeftArray, int[] RightArray)
 	{
 		int i = 0;
 		string[] Current;
@@ -34,7 +34,7 @@ class Program
 		string[] Lines = Text.Split('\n');
 		int[] LeftArray = new int[Lines.Length - (Lines[Lines.Length - 1].Length == 0 ? 1 : 0)];
 		int[] RightArray = new int[Lines.Length - (Lines[Lines.Length - 1].Length == 0 ? 1 : 0)];
-		CreatArrayFromString(Lines, LeftArray, RightArray);
+		CreateArrayFromString(Lines, LeftArray, RightArray);
 		Array.Sort(LeftArray);
 		Array.Sort(RightArray);
 		for(int i = 0; i < RightArray.Length;i++)
