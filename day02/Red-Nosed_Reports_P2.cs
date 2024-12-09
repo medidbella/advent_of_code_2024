@@ -30,8 +30,6 @@ class Red_Nosed_Reports_P2
 				return ToleratedLevels == 1;
 			}
 		}
-		// Console.WriteLine("flase case index = " + Index );
-		// Console.WriteLine("Lenght = " + Arr.Length);
 		return false;
 	}
 
@@ -44,27 +42,29 @@ class Red_Nosed_Reports_P2
 		{
 			if (Arr[j + 1] - Arr[j] < 0)
 				checks[j] = -1;
+			else if (Arr[j + 1] - Arr[j] == 0)
+				checks[i] == 0;
 		}
-		// foreach(var elm in checks)
-		// 	Console.Write(" " + elm);
-		// Console.Write("\n");
 		int decrements = Array.FindAll(checks, elm => elm == -1).Length;
 		int increments = Array.FindAll(checks, elm => elm == 1).Length;
+		int stable = Array.FindAll(checks, elm -> elm == 0).Length
+		if ((decrements != 0 && increments != 0 && stable != 0) || stable > 1)
+			ChangeRate = 0;
 		if (decrements == increments)
 			ChangeRate = 0;
 		if (decrements > increments)
 			ChangeRate = -1;
 	}
 
-	static int CheackReportSafty(string Line)
+	static int CheckReportSafety(string Line)
 	{
 		int ToleratedLevels = 0;
 		int ChangeRate = 1;
 		int Index = 0;
-		string[] Splited = Line.Split(" ");
-		int[] Levels = new int[Splited.Length];
-		foreach(string Element in Splited)
-			Levels[Index] = Convert.ToInt32(Splited[Index++]);
+		string[] Splitted = Line.Split(" ");
+		int[] Levels = new int[Spitted.Length];
+		foreach(string Element in Spited)
+			Levels[Index] = Convert.ToInt32(Spitted[Index++]);
 		GetChangeRate(Levels, ref ChangeRate);
 		if (ChangeRate == 0)
 			return 0;
@@ -87,7 +87,7 @@ class Red_Nosed_Reports_P2
 			return 1;
 		string[] Lines = File.ReadAllLines(FileName);
 		foreach(var Element in Lines)
-			Result += CheackReportSafty(Element);
+			Result += CheckReportSafety(Element);
 		Console.WriteLine(Result);
 		return 0;
 	}
