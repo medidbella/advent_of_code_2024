@@ -50,7 +50,9 @@ class Red_Nosed_Reports_P2
 		// Console.Write("\n");
 		int decrements = Array.FindAll(checks, elm => elm == -1).Length;
 		int increments = Array.FindAll(checks, elm => elm == 1).Length;
-		if ()
+		if (decrements == increments)
+			ChangeRate = 0;
+		if (decrements > increments)
 			ChangeRate = -1;
 	}
 
@@ -64,6 +66,8 @@ class Red_Nosed_Reports_P2
 		foreach(string Element in Splited)
 			Levels[Index] = Convert.ToInt32(Splited[Index++]);
 		GetChangeRate(Levels, ref ChangeRate);
+		if (ChangeRate == 0)
+			return 0;
 		Index = 1;
 		while(Index < Levels.Length)
 		{
