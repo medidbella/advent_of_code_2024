@@ -77,15 +77,7 @@ class Red_Nosed_Reports_P2
 			return 1;
 		string[] Lines = File.ReadAllLines(FileName);
 		foreach(var Element in Lines)
-		{
-			if (CheckReportSafety(Element) == 1)
-			{
-				Console.WriteLine(Element + " safe");
-				Result+=1;
-			}
-			else
-				Console.WriteLine(Element + " unsafe");
-		}
+			Result += CheckReportSafety(Element);
 		Console.WriteLine(Result);
 		return 0;
 	}
