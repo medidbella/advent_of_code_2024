@@ -2,14 +2,14 @@
 
 class Red_Nosed_Reports_P2
 {
-	static bool CheckerHelper(int[] Arr, ref int Index, ref int ToleratedLevels, int ChangeRate)
+	static bool CheckerHelper(int[] Arr, ref int Index, ref int ToleratedLevels, int ChangeRate, string Line)
 	{
 		if (ChangeRate == -1)
 		{
 			if (Arr[Index] - Arr[Index - 1] <= -1 && Arr[Index] - Arr[Index - 1] >= -3)
 				return true;
 			if (Index == Arr.Length - 1 && ToleratedLevels == 0)
-				return true;			
+				return true;
 			if (Index != Arr.Length - 1 && Arr[Index + 1] - Arr[Index - 1] <= -1 && Arr[Index + 1] - Arr[Index - 1] >= -3)
 			{
 				ToleratedLevels += 1;
@@ -43,11 +43,11 @@ class Red_Nosed_Reports_P2
 			if (Arr[j + 1] - Arr[j] < 0)
 				checks[j] = -1;
 			else if (Arr[j + 1] - Arr[j] == 0)
-				checks[i] == 0;
+				checks[j] = 0;
 		}
 		int decrements = Array.FindAll(checks, elm => elm == -1).Length;
 		int increments = Array.FindAll(checks, elm => elm == 1).Length;
-		int stable = Array.FindAll(checks, elm -> elm == 0).Length
+		int stable = Array.FindAll(checks, elm => elm == 0).Length;
 		if ((decrements != 0 && increments != 0 && stable != 0) || stable > 1)
 			ChangeRate = 0;
 		if (decrements == increments)
@@ -62,16 +62,16 @@ class Red_Nosed_Reports_P2
 		int ChangeRate = 1;
 		int Index = 0;
 		string[] Splitted = Line.Split(" ");
-		int[] Levels = new int[Spitted.Length];
-		foreach(string Element in Spited)
-			Levels[Index] = Convert.ToInt32(Spitted[Index++]);
+		int[] Levels = new int[Splitted.Length];
+		foreach(string Element in Splitted)
+			Levels[Index] = Convert.ToInt32(Splitted[Index++]);
 		GetChangeRate(Levels, ref ChangeRate);
 		if (ChangeRate == 0)
 			return 0;
 		Index = 1;
 		while(Index < Levels.Length)
 		{
-			if (!CheckerHelper(Levels, ref Index, ref ToleratedLevels, ChangeRate))
+			if (!CheckerHelper(Levels, ref Index, ref ToleratedLevels, ChangeRate, Line))
 				return 0;
 			Index++;
 		}
@@ -87,7 +87,13 @@ class Red_Nosed_Reports_P2
 			return 1;
 		string[] Lines = File.ReadAllLines(FileName);
 		foreach(var Element in Lines)
+		{
+			if (CheckReportSafety(Element) == 1)
+				Console.WriteLine(Element + " : is safe");
+			else
+				Console.WriteLine(Element + " : is unsafe");
 			Result += CheckReportSafety(Element);
+		}
 		Console.WriteLine(Result);
 		return 0;
 	}
