@@ -1,0 +1,15 @@
+/home/mohamed/Desktop/local_advent_of_code/day02/obj/Debug/net7.0/Red-Nosed_Reports.csproj.AssemblyReference.cache
+/home/mohamed/Desktop/local_advent_of_code/day02/obj/Debug/net7.0/Red-Nosed_Reports.GeneratedMSBuildEditorConfig.editorconfig
+/home/mohamed/Desktop/local_advent_of_code/day02/obj/Debug/net7.0/Red-Nosed_Reports.AssemblyInfoInputs.cache
+/home/mohamed/Desktop/local_advent_of_code/day02/obj/Debug/net7.0/Red-Nosed_Reports.AssemblyInfo.cs
+/home/mohamed/Desktop/local_advent_of_code/day02/obj/Debug/net7.0/Red-Nosed_Reports.csproj.CoreCompileInputs.cache
+/home/mohamed/Desktop/local_advent_of_code/day02/bin/Debug/net7.0/Red-Nosed_Reports
+/home/mohamed/Desktop/local_advent_of_code/day02/bin/Debug/net7.0/Red-Nosed_Reports.deps.json
+/home/mohamed/Desktop/local_advent_of_code/day02/bin/Debug/net7.0/Red-Nosed_Reports.runtimeconfig.json
+/home/mohamed/Desktop/local_advent_of_code/day02/bin/Debug/net7.0/Red-Nosed_Reports.dll
+/home/mohamed/Desktop/local_advent_of_code/day02/bin/Debug/net7.0/Red-Nosed_Reports.pdb
+/home/mohamed/Desktop/local_advent_of_code/day02/obj/Debug/net7.0/Red-Nosed_Reports.dll
+/home/mohamed/Desktop/local_advent_of_code/day02/obj/Debug/net7.0/refint/Red-Nosed_Reports.dll
+/home/mohamed/Desktop/local_advent_of_code/day02/obj/Debug/net7.0/Red-Nosed_Reports.pdb
+/home/mohamed/Desktop/local_advent_of_code/day02/obj/Debug/net7.0/Red-Nosed_Reports.genruntimeconfig.cache
+/home/mohamed/Desktop/local_advent_of_code/day02/obj/Debug/net7.0/ref/Red-Nosed_Reports.dll

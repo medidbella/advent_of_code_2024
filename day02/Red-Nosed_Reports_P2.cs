@@ -2,80 +2,70 @@
 
 class Red_Nosed_Reports_P2
 {
-	static bool CheckerHelper(int[] Arr, ref int Index, ref int ToleratedLevels, int ChangeRate, string Line)
+	static bool IndividualCheck(int diff, int ChangeRate)
 	{
-		if (ChangeRate == -1)
-		{
-			if (Arr[Index] - Arr[Index - 1] <= -1 && Arr[Index] - Arr[Index - 1] >= -3)
-				return true;
-			if (Index == Arr.Length - 1 && ToleratedLevels == 0)
-				return true;
-			if (Index != Arr.Length - 1 && Arr[Index + 1] - Arr[Index - 1] <= -1 && Arr[Index + 1] - Arr[Index - 1] >= -3)
-			{
-				ToleratedLevels += 1;
-				Index += 1;
-				return ToleratedLevels == 1;
-			}
-		}
-		else 
-		{
-			if (Arr[Index] - Arr[Index - 1] <= 3 && Arr[Index] - Arr[Index - 1] >= 1)
-				return true;
-			if (Index == Arr.Length -1 && ToleratedLevels == 0)
-				return true;
-			if (Index != Arr.Length - 1 && Arr[Index + 1] - Arr[Index - 1] <= 3 && Arr[Index + 1] - Arr[Index - 1] >= 1)
-			{
-				ToleratedLevels += 1;
-				Index += 1;
-				return ToleratedLevels == 1;
-			}
-		}
+		if (ChangeRate == -1 && diff <= -1 && diff >= -3)
+			return true;
+		else if (ChangeRate == 1 && diff >= 1 && diff <= 3)
+			return true;
 		return false;
 	}
-
-	static void GetChangeRate(int[] Arr, ref int ChangeRate) 
+	static bool CheckerHelper(int[] Arr)
 	{
-		int[] checks = new int[4];
-		for(int i= 0;i<4;i++)
-			checks[i] = 1;
-		for (int j = 0; j<4 ;j++)
-		{
-			if (Arr[j + 1] - Arr[j] < 0)
-				checks[j] = -1;
-			else if (Arr[j + 1] - Arr[j] == 0)
-				checks[j] = 0;
-		}
-		int decrements = Array.FindAll(checks, elm => elm == -1).Length;
-		int increments = Array.FindAll(checks, elm => elm == 1).Length;
-		int stable = Array.FindAll(checks, elm => elm == 0).Length;
-		if ((decrements != 0 && increments != 0 && stable != 0) || stable > 1)
-			ChangeRate = 0;
-		if (decrements == increments)
-			ChangeRate = 0;
-		if (decrements > increments)
+		int Index = 1;
+		int ChangeRate = 0;
+		if (Arr[0] > Arr[1])
 			ChangeRate = -1;
+		else if (Arr[0] < Arr[1])
+			ChangeRate = 1;
+		if (ChangeRate == 0)
+			return false;
+		while (Index < Arr.Length)
+		{
+			if (!IndividualCheck(Arr[Index] - Arr[Index - 1], ChangeRate))
+				return false;
+			Index++;
+		}
+		return true;
+	}
+
+	static int[] CreatSubArray(int[] Arr, int Index)
+	{
+		int iter = 0;
+		int add = 0;
+		int[] Result = new int[Arr.Length - 1];
+		while (iter < Result.Length)
+		{
+			if (iter + add != Index)
+			{
+				Result[iter] = Arr[iter + add];
+				iter++;
+			}
+			else
+				add += 1;
+		}
+		return Result;
 	}
 
 	static int CheckReportSafety(string Line)
 	{
-		int ToleratedLevels = 0;
-		int ChangeRate = 1;
+		int[] SubArray;
 		int Index = 0;
 		string[] Splitted = Line.Split(" ");
 		int[] Levels = new int[Splitted.Length];
 		foreach(string Element in Splitted)
 			Levels[Index] = Convert.ToInt32(Splitted[Index++]);
-		GetChangeRate(Levels, ref ChangeRate);
-		if (ChangeRate == 0)
-			return 0;
-		Index = 1;
+		if (CheckerHelper(Levels))
+				return 1;
+		Index = 0;
 		while(Index < Levels.Length)
 		{
-			if (!CheckerHelper(Levels, ref Index, ref ToleratedLevels, ChangeRate, Line))
-				return 0;
+			SubArray = CreatSubArray(Levels, Index);
+			if (CheckerHelper(SubArray))
+				return 1;
 			Index++;
 		}
-		return 1;
+		return 0;
 	}
 	
 	static int Main(string[] Args)
@@ -89,10 +79,12 @@ class Red_Nosed_Reports_P2
 		foreach(var Element in Lines)
 		{
 			if (CheckReportSafety(Element) == 1)
-				Console.WriteLine(Element + " : is safe");
+			{
+				Console.WriteLine(Element + " safe");
+				Result+=1;
+			}
 			else
-				Console.WriteLine(Element + " : is unsafe");
-			Result += CheckReportSafety(Element);
+				Console.WriteLine(Element + " unsafe");
 		}
 		Console.WriteLine(Result);
 		return 0;
