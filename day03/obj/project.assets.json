@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/mohamed/Desktop/local_advent_of_code/day03/Mull_It_Over/Mull_It_Over.csproj",
+      "projectUniqueName": "/home/mohamed/Desktop/local_advent_of_code/day03/Mull_It_Over.csproj",
       "projectName": "Mull_It_Over",
-      "projectPath": "/home/mohamed/Desktop/local_advent_of_code/day03/Mull_It_Over/Mull_It_Over.csproj",
+      "projectPath": "/home/mohamed/Desktop/local_advent_of_code/day03/Mull_It_Over.csproj",
       "packagesPath": "/home/mohamed/.nuget/packages/",
-      "outputPath": "/home/mohamed/Desktop/local_advent_of_code/day03/Mull_It_Over/obj/",
+      "outputPath": "/home/mohamed/Desktop/local_advent_of_code/day03/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/mohamed/.nuget/NuGet/NuGet.Config"

@@ -1,12 +1,11 @@
-﻿class Mull_it_Over_P1{
+﻿class Mull_it_Over_P2{
 
-	static bool IsInstructionHead(string Text, int Index)
+	static bool IsInstruction(string Text, String InstructionName ,int Index)
 	{
-		string Reference = "mul(";
 		int RefIndex = 0;
-		while (RefIndex < Reference.Length)
+		while (RefIndex < InstructionName.Length)
 		{
-			if (Text[Index] != Reference[RefIndex])
+			if (Text[Index] != InstructionName[RefIndex])
 				return false;
 			Index++;
 			RefIndex++;
@@ -44,15 +43,27 @@
 	{
 		string FileName = "input.txt";
 		int Result = 0;
+		bool state = true;
 		if (!File.Exists(FileName))
 			return 1;
 		string Text = File.ReadAllText(FileName);
 		for (int i = 0 ; i < Text.Length;i++)
 		{
-			if (IsInstructionHead(Text, i))
+			if (IsInstruction(Text, "don't()", i))
+			{
+				i += 6;
+				state = false;
+			}
+			if (IsInstruction(Text, "do()", i))
 			{
 				i += 4;
-				Result += ParseParams(Text, i);
+				state = true;
+			}
+			if (IsInstruction(Text, "mul(", i))
+			{
+				i += 4;
+				if (state)
+					Result += ParseParams(Text, i);
 			}
 		}
 		Console.WriteLine(Result);
