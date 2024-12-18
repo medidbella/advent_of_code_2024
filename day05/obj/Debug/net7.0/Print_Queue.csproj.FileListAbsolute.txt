@@ -1,0 +1,15 @@
+/home/mohamed/Desktop/local_advent_of_code/day05/obj/Debug/net7.0/Print_Queue.csproj.AssemblyReference.cache
+/home/mohamed/Desktop/local_advent_of_code/day05/obj/Debug/net7.0/Print_Queue.GeneratedMSBuildEditorConfig.editorconfig
+/home/mohamed/Desktop/local_advent_of_code/day05/obj/Debug/net7.0/Print_Queue.AssemblyInfoInputs.cache
+/home/mohamed/Desktop/local_advent_of_code/day05/obj/Debug/net7.0/Print_Queue.AssemblyInfo.cs
+/home/mohamed/Desktop/local_advent_of_code/day05/obj/Debug/net7.0/Print_Queue.csproj.CoreCompileInputs.cache
+/home/mohamed/Desktop/local_advent_of_code/day05/bin/Debug/net7.0/Print_Queue
+/home/mohamed/Desktop/local_advent_of_code/day05/bin/Debug/net7.0/Print_Queue.deps.json
+/home/mohamed/Desktop/local_advent_of_code/day05/bin/Debug/net7.0/Print_Queue.runtimeconfig.json
+/home/mohamed/Desktop/local_advent_of_code/day05/bin/Debug/net7.0/Print_Queue.dll
+/home/mohamed/Desktop/local_advent_of_code/day05/bin/Debug/net7.0/Print_Queue.pdb
+/home/mohamed/Desktop/local_advent_of_code/day05/obj/Debug/net7.0/Print_Queue.dll
+/home/mohamed/Desktop/local_advent_of_code/day05/obj/Debug/net7.0/refint/Print_Queue.dll
+/home/mohamed/Desktop/local_advent_of_code/day05/obj/Debug/net7.0/Print_Queue.pdb
+/home/mohamed/Desktop/local_advent_of_code/day05/obj/Debug/net7.0/Print_Queue.genruntimeconfig.cache
+/home/mohamed/Desktop/local_advent_of_code/day05/obj/Debug/net7.0/ref/Print_Queue.dll

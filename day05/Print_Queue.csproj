@@ -4,7 +4,7 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <StartupObject>Print_Queue_P1</StartupObject>
+    <StartupObject>part2.Print_Queue_P2</StartupObject>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 

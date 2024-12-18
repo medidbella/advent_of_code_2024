@@ -1,0 +1,39 @@
+set_modifiers()
+{
+  if (char == 'v')
+    ymod = 1;
+  char == '^'
+    ymod = -1;
+  char == '>'
+    xmod = 1;
+  char == '<'
+    xmod = -1;
+}
+
+set_point_of_view()
+{
+  if ('v' -> '<')
+  ('^' -> '>')
+  ('<' -> '^')
+  ('>' -> 'v')
+}
+
+recursive(int flag)
+{
+  if flag
+    set_point_of_view()
+  set_modifiers(xmod,  ymod);
+  while
+  {
+    if ([x_iter + xmod][y_iter + ymod] == '.')
+    {
+      [x_iter + xmod][y_iter + ymod] = '[x_iter][y_iter]';
+      [x_iter + xmod][y_iter + ymod] = 'X';
+    }
+    
+    if (current pos + modifier is out of range)
+      return;
+    x_iter++;
+    y_iter++;
+	}
+}
