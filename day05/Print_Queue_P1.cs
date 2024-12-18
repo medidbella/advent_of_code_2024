@@ -77,7 +77,7 @@ class Print_Queue_P1 {
 		int iter = 0;
 		NumberData currentNode;
 		for (int i = 0; i < strings.Length ;i++)
-			numbers[i] = Convert.ToInt32(numbers[i]);
+			numbers[i] = Convert.ToInt32(strings[i]);
 		while (iter < numbers.Length - 1)
 		{
 			currentNode = GetMatchingNode(numbers[iter], uniqueNumbersList);
@@ -98,6 +98,7 @@ class Print_Queue_P1 {
 		int Index = 0;
 		LinkedList<NumberData> uniqueNumbersList = new();
 		InitializeNumbersList(uniqueNumbersList, lines, ref Index);
+		Index += 1;
 		while (Index < lines.Length)
 		{
 			result += CheckUpdateOrder(uniqueNumbersList, lines[Index]);
