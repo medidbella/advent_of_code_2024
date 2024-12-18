@@ -31,7 +31,6 @@ class Ceres_Search_P2{
         return true;
     }
 
-
     static int Syntax_checker(int charIter, int lineIter, string[] lines)
     {
         int initiaLineIndex = lineIter;
@@ -81,13 +80,7 @@ class Ceres_Search_P2{
             while (charIter < lines[lineIter].Length)
             {
                 if (lines[lineIter][charIter] == 'M' || lines[lineIter][charIter] == 'S')
-                {
-                    if (Syntax_checker(charIter, lineIter, lines) == 1)
-                    {
-                        result += 1;
-                        Console.WriteLine("[" + lineIter+ "][" + charIter +"]");
-                    }
-                }
+                    result += Syntax_checker(charIter, lineIter, lines);
                 charIter++;
             }
             lineIter++;
