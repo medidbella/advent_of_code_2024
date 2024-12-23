@@ -4,7 +4,7 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <StartupObject>Guard_Gallivant_P1</StartupObject>
+    <StartupObject>part2.Guard_Gallivant_P2</StartupObject>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 

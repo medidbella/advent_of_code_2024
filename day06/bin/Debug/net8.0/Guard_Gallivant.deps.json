@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Guard_Gallivant/1.0.0": {
+        "runtime": {
+          "Guard_Gallivant.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Guard_Gallivant/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

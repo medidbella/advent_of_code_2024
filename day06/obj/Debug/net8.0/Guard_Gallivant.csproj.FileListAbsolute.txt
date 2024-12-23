@@ -1,0 +1,15 @@
+/workspaces/dotnet-codespaces/local_advent_of_code/day06/obj/Debug/net8.0/Guard_Gallivant.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/dotnet-codespaces/local_advent_of_code/day06/obj/Debug/net8.0/Guard_Gallivant.AssemblyInfoInputs.cache
+/workspaces/dotnet-codespaces/local_advent_of_code/day06/obj/Debug/net8.0/Guard_Gallivant.AssemblyInfo.cs
+/workspaces/dotnet-codespaces/local_advent_of_code/day06/obj/Debug/net8.0/Guard_Gallivant.csproj.CoreCompileInputs.cache
+/workspaces/dotnet-codespaces/local_advent_of_code/day06/obj/Debug/net8.0/Guard_Gallivant.sourcelink.json
+/workspaces/dotnet-codespaces/local_advent_of_code/day06/bin/Debug/net8.0/Guard_Gallivant
+/workspaces/dotnet-codespaces/local_advent_of_code/day06/bin/Debug/net8.0/Guard_Gallivant.deps.json
+/workspaces/dotnet-codespaces/local_advent_of_code/day06/bin/Debug/net8.0/Guard_Gallivant.runtimeconfig.json
+/workspaces/dotnet-codespaces/local_advent_of_code/day06/bin/Debug/net8.0/Guard_Gallivant.dll
+/workspaces/dotnet-codespaces/local_advent_of_code/day06/bin/Debug/net8.0/Guard_Gallivant.pdb
+/workspaces/dotnet-codespaces/local_advent_of_code/day06/obj/Debug/net8.0/Guard_Gallivant.dll
+/workspaces/dotnet-codespaces/local_advent_of_code/day06/obj/Debug/net8.0/refint/Guard_Gallivant.dll
+/workspaces/dotnet-codespaces/local_advent_of_code/day06/obj/Debug/net8.0/Guard_Gallivant.pdb
+/workspaces/dotnet-codespaces/local_advent_of_code/day06/obj/Debug/net8.0/Guard_Gallivant.genruntimeconfig.cache
+/workspaces/dotnet-codespaces/local_advent_of_code/day06/obj/Debug/net8.0/ref/Guard_Gallivant.dll
