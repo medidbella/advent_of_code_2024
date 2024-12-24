@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Guard_Gallivant")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aa9630cdfadf47835b76e2af0895b8fa45a2c9a1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d85eb1cdbe68ba8f693c76eeece6871ce504f6fd")]
 [assembly: System.Reflection.AssemblyProductAttribute("Guard_Gallivant")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Guard_Gallivant")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
